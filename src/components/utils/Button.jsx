@@ -1,8 +1,9 @@
 import clsx from "clsx";
+import Link from "next/link";
 
 const Button = (props) => {
   return (
-    <button
+    <Link
       {...props}
       className={clsx(
         "py-2 px-4 text-white rounded-md bg-gradient-to-r uppercase font-semibold text-sm",
@@ -15,7 +16,7 @@ const Button = (props) => {
       )}
     >
       {props.label}
-    </button>
+    </Link>
   );
 };
 

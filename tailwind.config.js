@@ -13,6 +13,10 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "bg-coin": "url('/images/bg.jpeg')",
       },
+      dropShadow: {
+        green: "0 2px 5px rgba(4,255,0)",
+        red: "0 2px 5px rgba(255,4,0)",
+      },
     },
   },
   plugins: [],
