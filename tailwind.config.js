@@ -17,6 +17,15 @@ module.exports = {
         green: "0 2px 5px rgba(4,255,0)",
         red: "0 2px 5px rgba(255,4,0)",
       },
+      keyframes: {
+        "fade-in": {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 0.2 },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 2s ease-in-out linear",
+      },
     },
   },
   plugins: [],

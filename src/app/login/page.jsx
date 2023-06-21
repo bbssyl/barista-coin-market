@@ -5,10 +5,10 @@ import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 const LoginPage = () => {
   return (
-    <div className="h-screen flex min-[320px]:justify-center md:justify-center items-center gap-10 relative">
+    <div className="h-screen flex min-[280px]:justify-center md:justify-center items-center gap-10 relative">
       <div className="h-3/5 z-10">
-        <div className="flex flex-col justify-center items-center shadow-2xl filter-none min-[320px]:p-4 md:p-10 rounded-md relative bg-indigo-950 bg-opacity-90 h-full">
-          <div className="absolute min-[320px]:right-12 top-4 -z-10 sm:-right-12">
+        <div className="flex flex-col justify-center items-center shadow-2xl filter-none min-[280px]:p-4 md:p-10 rounded-md relative bg-indigo-950 bg-opacity-90 h-full">
+          <div className="absolute min-[280px]:right-12 top-4 -z-10 sm:-right-12">
             <svg
               width="67"
               height="67"
@@ -121,7 +121,7 @@ const LoginPage = () => {
           </Link>
         </div>
       </div>
-      <div className="min-[320px]:hidden w-1/3 md:flex flex-col justify-center items-center gap-5">
+      <div className="min-[280px]:hidden w-1/3 md:flex flex-col justify-center items-center gap-5">
         <h2 className="text-blue-400 text-7xl font-semibold">BARISTA</h2>
         <div className="border-b border-blue-500 w-52 border-2"></div>
         <p className="text-white">Your currency dashboard</p>

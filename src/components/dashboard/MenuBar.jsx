@@ -2,59 +2,38 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBars,
-  faWallet,
-  faShuffle,
-  faRightLeft,
-  faSquarePollVertical,
   faArrowRightToBracket,
+  faClose,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { usePathname } from "next/navigation";
+import { renderMenu } from "@/service/api";
 
-const renderMenu = [
-  {
-    id: 1,
-    title: "Overview",
-    icon: faBars,
-    url: "/overview",
-  },
-  {
-    id: 2,
-    title: "Wallets",
-    icon: faWallet,
-    url: "/wallets",
-  },
-  {
-    id: 3,
-    title: "Transictions",
-    icon: faShuffle,
-    url: "/transictions",
-  },
-  {
-    id: 4,
-    title: "Exchange",
-    icon: faRightLeft,
-    url: "/exchange",
-  },
-  {
-    id: 5,
-    title: "Market",
-    icon: faSquarePollVertical,
-    url: "/market",
-  },
-];
-
-const MenuBar = () => {
+const MenuBar = ({ open, handleOpen, menuRef }) => {
   const pathname = usePathname();
 
   return (
-    <aside className="py-4 w-72 shadow-2xl h-screen bg-gradient-to-t from-indigo-950 to-indigo-900/25 flex flex-col justify-between relative">
+    <aside
+      className={`py-4 w-72 shadow-2xl h-full bg-gradient-to-t from-indigo-950 to-indigo-950/95 xl:flex flex-col justify-between sticky top-0  ${
+        open ? "min-[280px]:flex z-30 " : "min-[280px]:hidden"
+      }`}
+      ref={menuRef}
+    >
       <div>
-        <h2 className="uppercase text-blue-400 text-center font-semibold text-2xl">
-          Barista
-        </h2>
-        <div className="w-1/2 border border-blue-400 mx-auto mb-10"></div>
+        <div className="flex justify-around items-center mb-10">
+          <div>
+            <h2 className="uppercase text-blue-400 text-center font-semibold text-2xl">
+              Barista
+            </h2>
+            <div className="w-full border border-blue-400 mx-auto"></div>
+          </div>
+          <button onClick={() => handleOpen()} className="xl:hidden">
+            <FontAwesomeIcon
+              icon={faClose}
+              className="w-5 h-5 rounded-full p-2 hover:bg-indigo-950/50"
+            />
+          </button>
+        </div>
         {renderMenu.map((item) => {
           return (
             <div key={item.id}>
@@ -91,7 +70,7 @@ const MenuBar = () => {
           </Link>
         </div>
       </div>
-      <div className="absolute bottom-72 min-[320px]:right-0 md:-right-10">
+      <div className="absolute bottom-72 min-[280px]:right-0 md:-right-10">
         <svg
           width="117"
           height="109"

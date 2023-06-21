@@ -5,6 +5,7 @@ const FirstChild = () => {
         src="/images/bg.jpeg"
         alt="bg.jpeg"
         className="absolute h-full w-full opacity-10"
+        loading="lazy"
       />
       <article className="w-1/3 relative">
         <h2 className="text-indigo-50 text-7xl text-center">

@@ -30,8 +30,8 @@ const NavbarComponent = () => {
           arista Coin
         </Link>
       </div>
-      <div className="flex flex-grow min-[320px]:justify-end md:justify-between md:pl-9">
-        <div className="min-[320px]:hidden md:flex items-center gap-3">
+      <div className="flex flex-grow min-[280px]:justify-end md:justify-between md:pl-9">
+        <div className="min-[280px]:hidden md:flex items-center gap-3">
           {renderMenuItemContent.map((item) => {
             return (
               <Link href="#" key={item.id} className="flex gap-1 items-center">

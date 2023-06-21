@@ -7,3 +7,16 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
 }
+
+.scroll-container {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}

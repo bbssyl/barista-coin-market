@@ -5,13 +5,19 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 const Card = ({ data }) => {
   return (
-    <div
-      className={`shadow-md shadow-gray-950/40 p-10 rounded-md bg-gradient-to-tr ${data.color}`}
+    <section
+      className={`shadow-md shadow-gray-950/40 p-4 rounded-md  bg-gradient-to-tr from-gray-950/50 ${data.color}`}
     >
       <span className="font-bold">{data.name}</span>
-      <div className="flex items-center gap-5">
-        <div className="flex">
-          <img src={data.icon} alt={data.icon} />
+      <div className="flex items-center justify-evenly gap-5">
+        <div className="flex flex-col justify-center items-center gap-1">
+          <img
+            src={data.icon}
+            alt={data.icon}
+            width={100}
+            height={100}
+            loading="lazy"
+          />
           <div className="flex flex-col gap-2">
             <span className="font-bold text-xl">
               {data.wallet} {data.shortscut}
@@ -34,7 +40,10 @@ const Card = ({ data }) => {
                         : "text-red-500 drop-shadow-red"
                     }`}
                   />
-                  <div className="flex flex-col">
+                  <div
+                    variants={item}
+                    className="flex flex-col border-b border-gray-500"
+                  >
                     <span>
                       ${item.sellPrice} ={" "}
                       {item.sellCount.toString().replace(".", ",")}{" "}
@@ -51,7 +60,7 @@ const Card = ({ data }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
