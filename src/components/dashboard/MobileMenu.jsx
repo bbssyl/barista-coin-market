@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 const MobileMenu = ({ handleOpen }) => {
   const router = useRouter();
   return (
-    <div className="fixed bottom-0 left-0 right-0 h-16 rounded-full drop-shadow-2xl bg-gradient-to-b from-indigo-950 to-black w-full min-[280px]:grid xl:hidden grid-cols-3 place-items-center">
+    <div className="fixed bottom-0 left-0 right-0 h-16 rounded-full drop-shadow-2xl bg-gradient-to-b from-indigo-950 to-black/50 w-full min-[280px]:grid xl:hidden grid-cols-3 place-items-center">
       <button
         className="flex flex-col gap-1 justify-center items-center"
         onClick={() => handleOpen()}
