@@ -5,9 +5,22 @@ import {
   faEnvelope,
   faBell,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import NotificationComponent from "@/components/utils/NotificationComponent";
 const SearchBar = () => {
   const [open, setOpen] = useState(false);
+  const noticeRef = useRef();
+  useEffect(() => {
+    const handleClose = (event) => {
+      if (noticeRef.current && !noticeRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClose);
+    return () => {
+      document.removeEventListener("mousedown", handleClose);
+    };
+  }, []);
 
   const handleOpen = () => {
     setOpen(!open);
@@ -25,17 +38,14 @@ const SearchBar = () => {
         />
       </label>
       <div className="min-[280px]:hidden sm:flex gap-8">
-        <div className="relative cursor-pointer" onClick={handleOpen}>
-          <span className="absolute bg-blue-500 rounded-full px-2 text-sm -top-2 -left-2">
-            1
-          </span>
-          <FontAwesomeIcon icon={faEnvelope} className="w-6 h-6" />
-        </div>
         <div className="relative">
-          <span className="absolute bg-blue-500 rounded-full px-2 text-sm -top-2 -left-2">
-            8
-          </span>
-          <FontAwesomeIcon icon={faBell} className="w-6 h-6" />
+          <div className="cursor-pointer" onClick={handleOpen}>
+            <span className="absolute bg-blue-500 rounded-full px-2 text-sm -top-2 -left-2">
+              3
+            </span>
+            <FontAwesomeIcon icon={faBell} className="w-6 h-6" />
+          </div>
+          <NotificationComponent open={open} noticeRef={noticeRef} />
         </div>
       </div>
     </div>
