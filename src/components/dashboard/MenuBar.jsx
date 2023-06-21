@@ -11,7 +11,6 @@ import { renderMenu } from "@/service/api";
 
 const MenuBar = ({ open, handleOpen, menuRef }) => {
   const pathname = usePathname();
-
   return (
     <aside
       className={`py-4 w-72 shadow-2xl h-full bg-gradient-to-t from-indigo-950 to-indigo-950/95 xl:flex flex-col justify-between sticky top-0  ${

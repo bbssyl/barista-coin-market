@@ -23,6 +23,7 @@ const DashboardLayout = ({ children }) => {
   const handleOpen = () => {
     setOpen(!open);
   };
+
   return (
     <div className="flex gap-2 bg-gradient-to-r from-black/50 to-indigo-900/60 text-white h-screen overflow-auto relative">
       <MenuBar open={open} handleOpen={handleOpen} menuRef={menuRef} />

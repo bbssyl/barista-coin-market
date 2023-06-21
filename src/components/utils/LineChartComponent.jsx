@@ -4,10 +4,14 @@ import {
   Line,
   LineChart,
   ResponsiveContainer,
-  Tooltip,
+  Tooltip as RechartTooltip,
   XAxis,
   YAxis,
 } from "recharts";
+
+const RTooltip = (props) => {
+  return <RechartTooltip {...props} />;
+};
 
 const LineChartComponent = ({
   width = "100%",
@@ -72,7 +76,7 @@ const LineChartComponent = ({
             tickLine={false}
             opacity={0.5}
           />
-          <Tooltip />
+          <RTooltip />
         </LineChart>
       </ResponsiveContainer>
     </div>

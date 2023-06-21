@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
 
 const NotificationComponent = ({ open, noticeRef }) => {
   return (
@@ -8,7 +7,7 @@ const NotificationComponent = ({ open, noticeRef }) => {
       className={`relative z-10  ${open ? "visible" : "hidden"}`}
       ref={noticeRef}
     >
-      <div className="absolute top-0 right-0 bg-indigo-950 p-4 w-[400px] shadow-md shadow-black rounded-md">
+      <div className="absolute top-0 right-0 bg-indigo-950 p-4 min-[280px]:w-[280px] sm:w-[400px] shadow-md shadow-black rounded-md">
         <div className="border-b border-indigo-900">
           <div className="flex gap-1 items-center">
             <span className="font-semibold py-2">BTC News</span>
