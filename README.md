@@ -1,5 +1,8 @@
->> LIVE LINK(VERCEL)
-#(BARISTA FAKE COIN APP)[https://barista-fake-coin-market.vercel.app/]
+> LIVE LINK(VERCEL)
+
+[BARISTA FAKE COIN APP (LIVE)](https://barista-fake-coin-market.vercel.app/)
+
+
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
