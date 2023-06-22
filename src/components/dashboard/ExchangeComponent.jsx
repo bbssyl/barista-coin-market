@@ -23,7 +23,7 @@ const ExchangeComponent = () => {
               />
             </div>
             <div className="mt-3">
-              <Input fullfilled />
+              <Input fullfilled="true" />
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ const ExchangeComponent = () => {
               />
             </div>
             <div className="mt-3">
-              <Input fullfilled />
+              <Input fullfilled="true" />
             </div>
           </div>
         </div>

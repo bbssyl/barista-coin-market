@@ -13,7 +13,7 @@ const Input = (props) => {
           {...props}
           className={`py-3 pr-3 rounded-md outline-none text-white focus:border-b focus:border-blue-500 ${
             props.icon ? "pl-14" : "pl-4"
-          } ${props.fullfilled ? "w-full" : null}`}
+          } ${props.fullfilled === "true" ? "w-full" : null}`}
           style={{ background: "rgba(46, 53, 88, 1)" }}
         />
       </label>

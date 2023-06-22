@@ -18,23 +18,29 @@ const LineChartComponent = ({
   height = 200,
   data = [],
   months = [],
-  coins = [],
+  chartData = [],
+  handleChange,
+  coinRef,
 }) => {
   return (
     <div className="rounded-md shadow-lg bg-indigo-950 p-4 h-full">
       <div className="flex gap-2 justify-between p-2">
         <div className="flex gap-2">
           <span className="text-white font-semibold">Market</span>
-          {coins.length > 0 ? (
-            <select name="" id="" className="bg-transparent outline-none">
-              {coins.map((coin) => {
+          {data.length > 0 ? (
+            <select
+              className="bg-transparent outline-none"
+              ref={coinRef}
+              onChange={() => handleChange()}
+            >
+              {data.map((coin) => {
                 return (
                   <option
-                    key={coin.id}
-                    value={coin.shortscut}
+                    key={coin.CoinInfo.Id}
+                    value={coin.CoinInfo.Internal}
                     className="text-indigo-600 "
                   >
-                    {coin.name}
+                    {coin.CoinInfo.FullName}
                   </option>
                 );
               })}
@@ -56,8 +62,13 @@ const LineChartComponent = ({
         </div>
       </div>
       <ResponsiveContainer width={width} height={height}>
-        <LineChart data={data} width={width} height={height}>
-          <Line type="monotone" dataKey="pv" stroke="#1288e8" strokeWidth={2} />
+        <LineChart data={chartData.Data} width={width} height={height}>
+          <Line
+            type="monotone"
+            dataKey="close"
+            stroke="#1288e8"
+            strokeWidth={2}
+          />
           <CartesianGrid
             vertical={false}
             stroke="#1288e8"
@@ -76,7 +87,6 @@ const LineChartComponent = ({
             tickLine={false}
             opacity={0.5}
           />
-          <RTooltip />
         </LineChart>
       </ResponsiveContainer>
     </div>

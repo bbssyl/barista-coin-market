@@ -234,4 +234,29 @@ export const spendingData = [
   },
 ];
 
-export const fetchDashboardData = () => {};
+export const fetchDashboardData = async (coins, currency) => {
+  const response = await fetch(
+    `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${coins}&tsyms=${currency}&api_key=${process.env.NEXT_APP_CRYPTO_COMPARE_API_KEY}`
+  );
+  return response.json();
+};
+export const topListFetch = async (limit = 4, currency = "USD") => {
+  const response = await fetch(
+    `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=${limit}&tsym=${currency}&api_key=${process.env.NEXT_APP_CRYPTO_COMPARE_API_KEY}`
+  ).then((res) => res.json());
+  return response.Data;
+};
+
+export const chartDataFetch = async (coin, currency = "USD") => {
+  const response = await fetch(
+    `https://min-api.cryptocompare.com/data/v2/histoday?fsym=${coin}&tsym=${currency}&limit=10&api_key=${process.env.NEXT_APP_CRYPTO_COMPARE_API_KEY}`
+  ).then((res) => res.json());
+  return response.Data;
+};
+
+export const newsDataFetch = async () => {
+  const response = fetch(
+    `https://min-api.cryptocompare.com/data/v2/news/?lang=EN&api_key=${process.env.NEXT_APP_CRYPTO_COMPARE_API_KEY}`
+  ).then((res) => res.json());
+  return response;
+};

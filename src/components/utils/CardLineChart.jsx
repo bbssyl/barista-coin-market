@@ -4,7 +4,7 @@ const CardLineChart = ({ width = "100%", height = 100, data = [] }) => {
     <ResponsiveContainer width={width} height={height}>
       <LineChart data={data} width={width} height={height}>
         <Line
-          dataKey="pv"
+          dataKey="close"
           stroke="#3c3c"
           strokeWidth={4}
           dot={false}

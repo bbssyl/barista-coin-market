@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Cell, Pie, PieChart, ResponsiveContainer, Sector } from "recharts";
-
+import { pieChartData } from "@/service/api";
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
   const {
@@ -93,7 +93,7 @@ const PieChartComponent = ({
         <PieChart width={width} height={height}>
           <Pie
             stroke="0"
-            data={dataChart}
+            data={pieChartData}
             activeIndex={activeIndex}
             activeShape={renderActiveShape}
             onMouseEnter={handleChange}
@@ -104,7 +104,7 @@ const PieChartComponent = ({
             fill="#8884d8"
             dataKey="value"
           >
-            {dataChart.map((entry, index) => (
+            {pieChartData.map((entry, index) => (
               <Cell
                 key={`cell-${index}`}
                 fill={COLORS[index % COLORS.length]}
@@ -116,15 +116,15 @@ const PieChartComponent = ({
       <div>
         {dataChart.map((data, index) => {
           return (
-            <div className="flex flex-col gap-1 p-3" key={data.name}>
+            <div className="flex flex-col gap-1 p-3" key={data.CoinInfo.Id}>
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-2">
                   <div
                     className={`w-4 h-4 rounded-full bg-gradient-to-tr from-white to-gray-600`}
                   ></div>
-                  <span>{data.name}</span>
+                  <span>{data.CoinInfo.FullName}</span>
                 </div>
-                <span>${data.value}</span>
+                <span>${(data.RAW.USD.LOWDAY / 3).toFixed(0)}</span>
               </div>
             </div>
           );
