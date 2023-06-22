@@ -112,8 +112,8 @@ const LoginPage = () => {
             <Input type="email" placeholder="E-mail" icon={faUser} />
             <Input type="password" placeholder="Password" icon={faLock} />
             <div className="flex justify-evenly w-full mt-5">
-              <Button href="#" label="Sign Up" secondary />
-              <Button href="/dashboard" label="Sign In" primary />
+              <Button href="#" label="Sign Up" color={"secondary"} />
+              <Button href="/dashboard" label="Sign In" color={"primary"} />
             </div>
           </div>
           <Link href="#" className="underline text-sm text-blue-400">

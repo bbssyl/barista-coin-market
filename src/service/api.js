@@ -177,18 +177,12 @@ export const renderMenu = [
   },
   {
     id: 3,
-    title: "Transictions",
-    icon: faShuffle,
-    url: "/transictions",
-  },
-  {
-    id: 4,
     title: "Exchange",
     icon: faRightLeft,
     url: "/exchange",
   },
   {
-    id: 5,
+    id: 4,
     title: "Market",
     icon: faSquarePollVertical,
     url: "/market",

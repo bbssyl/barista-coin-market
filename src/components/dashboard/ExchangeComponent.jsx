@@ -74,7 +74,7 @@ const ExchangeComponent = () => {
         </div>
       </div>
       <div className="mx-auto pb-10">
-        <Button href={pathname} label="Exchange" primary />
+        <Button href={pathname} label="Exchange" color={"primary"} />
       </div>
     </div>
   );

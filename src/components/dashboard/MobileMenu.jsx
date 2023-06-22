@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHomeAlt, faBell, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faHomeAlt, faBars } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation";
 
 const MobileMenu = ({ handleOpen, noticeRef, handleNoticeOpen }) => {

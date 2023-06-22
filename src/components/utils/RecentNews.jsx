@@ -13,37 +13,55 @@ const RecentNews = () => {
             <span className="text-gray-500 text-xs whitespace-nowrap">
               19 hours ago
             </span>
-            <p>SEC Fails to Show Court Blockvest Tokens Are Securities</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Consequatur, eius.
+            </p>
           </div>{" "}
           <div className="flex gap-10 items-center">
             <span className="text-gray-500 text-xs whitespace-nowrap">
               19 hours ago
             </span>
-            <p>SEC Fails to Show Court Blockvest Tokens Are Securities</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Consequatur, eius.
+            </p>
           </div>{" "}
           <div className="flex gap-10 items-center">
             <span className="text-gray-500 text-xs whitespace-nowrap">
               19 hours ago
             </span>
-            <p>SEC Fails to Show Court Blockvest Tokens Are Securities</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Consequatur, eius.
+            </p>
           </div>{" "}
           <div className="flex gap-10 items-center">
             <span className="text-gray-500 text-xs whitespace-nowrap">
               19 hours ago
             </span>
-            <p>SEC Fails to Show Court Blockvest Tokens Are Securities</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Consequatur, eius.
+            </p>
           </div>{" "}
           <div className="flex gap-10 items-center">
             <span className="text-gray-500 text-xs whitespace-nowrap">
               19 hours ago
             </span>
-            <p>SEC Fails to Show Court Blockvest Tokens Are Securities</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Consequatur, eius.
+            </p>
           </div>{" "}
           <div className="flex gap-10 items-center">
             <span className="text-gray-500 text-xs whitespace-nowrap">
               19 hours ago
             </span>
-            <p>SEC Fails to Show Court Blockvest Tokens Are Securities</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Consequatur, eius.
+            </p>
           </div>
         </div>
       </div>
