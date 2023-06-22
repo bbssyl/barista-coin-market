@@ -6,15 +6,18 @@ import WalletComponent from "@/components/dashboard/WalletComponent";
 
 const SpesificContainer = ({ params }) => {
   return (
-    <div>
-      <h4 className="text-white font-semibold capitalize mb-3">
-        {params.category}
-      </h4>
-      {params.category === "overview" && <OverviewComponent />}
-      {params.category === "wallets" && <WalletComponent />}
-      {params.category === "market" && <MarketComponent />}
-      {params.category === "exchange" && <ExchangeComponent />}
-    </div>
+    <>
+      <title>{params.category.toUpperCase()}</title>
+      <div>
+        <h4 className="text-white font-semibold capitalize mb-3">
+          {params.category}
+        </h4>
+        {params.category === "overview" && <OverviewComponent />}
+        {params.category === "wallets" && <WalletComponent />}
+        {params.category === "market" && <MarketComponent />}
+        {params.category === "exchange" && <ExchangeComponent />}
+      </div>
+    </>
   );
 };
 
