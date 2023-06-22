@@ -58,7 +58,7 @@ const MenuBar = ({ open, handleOpen, menuRef }) => {
             className="whitespace-nowrap flex items-center gap-3 px-2 transition-all ease-in-out duration-200 hover:text-white"
           >
             <FontAwesomeIcon icon={faUser} className="w-5" />
-            Barış Benli
+            Barış
           </Link>
           <Link
             href={"#"}

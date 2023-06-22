@@ -49,13 +49,13 @@ const cardAbout = [
 ];
 const ThirdChild = () => {
   return (
-    <section className="h-screen flex flex-col gap-3 items-center justify-evenly snap-mandatory scroll-smooth overflow-y-auto snap-center  text-indigo-50 bg-indigo-900 bg-opacity-50">
+    <section className="min-[2580px]:h-full py-5 md:h-screen flex flex-col gap-3 items-center justify-evenly snap-mandatory scroll-smooth overflow-y-auto snap-center  text-indigo-50 bg-gradient-to-tr from-indigo-950 to-indigo-900 bg-opacity-50">
       <div className="flex flex-col gap-3 justify-center items-center">
         <div className="text-center">
           <p>Barista Coin ile tanışın!</p>
           <h4 className="text-3xl font-semibold">Neden Barista Coin?</h4>
         </div>
-        <div className="w-2/3 flex gap-3">
+        <div className="grid min-[280px]:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {cardItems.map((card) => {
             return (
               <div
@@ -79,7 +79,7 @@ const ThirdChild = () => {
             Kripto para hakkında herşey
           </h4>
         </div>
-        <div className="w-3/3 flex gap-3">
+        <div className="grid min-[280px]:grid-cols-1 min-[280px]:w-full md:grid-cols-3 gap-3">
           {cardAbout.map((card) => {
             return (
               <div

@@ -40,7 +40,7 @@ const LoginPage = () => {
               </defs>
             </svg>
           </div>
-          <div className="absolute top-10 -left-5">
+          <div className="absolute top-10 -left-5 animate-manually-bounce">
             <svg
               width="67"
               height="67"
@@ -112,8 +112,8 @@ const LoginPage = () => {
             <Input type="email" placeholder="E-mail" icon={faUser} />
             <Input type="password" placeholder="Password" icon={faLock} />
             <div className="flex justify-evenly w-full mt-5">
-              <Button href="#" label="Sign Up" color={"secondary"} />
-              <Button href="/dashboard" label="Sign In" color={"primary"} />
+              <Button path="/dashboard" title="Sign Up" color={"secondary"} />
+              <Button path="/dashboard" title="Sign In" color={"primary"} />
             </div>
           </div>
           <Link href="#" className="underline text-sm text-blue-400">
@@ -127,7 +127,7 @@ const LoginPage = () => {
         <p className="text-white">Your currency dashboard</p>
       </div>
 
-      <div className="absolute bottom-44 right-80">
+      <div className="absolute bottom-44 right-80 animate-manually-bounce">
         <svg
           width="117"
           height="109"

@@ -18,13 +18,13 @@ module.exports = {
         red: "0 2px 5px rgba(255,4,0)",
       },
       keyframes: {
-        "fade-in": {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 0.2 },
+        "manually-bounce": {
+          "0%": { transform: "width(-20px)" },
+          "100%": { transform: "translateY(20px)" },
         },
       },
       animation: {
-        "fade-in": "fade-in 2s ease-in-out linear",
+        "manually-bounce": "manually-bounce 2s ease-in-out infinite alternate",
       },
     },
   },
