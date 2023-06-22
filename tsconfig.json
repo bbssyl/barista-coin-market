@@ -31,7 +31,9 @@
     "src/components/utils/Input.jsx",
     "src/components/utils/Button.jsx",
     "src/app/login/layout.jsx",
-    "src/app/login/page.jsx"
+    "src/app/login/page.jsx",
+    "src/components/home/tradingview/TopTableList.jsx",
+    "src/components/home/tradingview/TickerTapeWidget.jsx"
   ],
   "exclude": ["node_modules"]
 }
