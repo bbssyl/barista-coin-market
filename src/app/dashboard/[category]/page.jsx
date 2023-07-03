@@ -3,8 +3,19 @@ import OverviewComponent from "@/components/dashboard/OverviewComponent";
 import MarketComponent from "@/components/dashboard/MarketComponents";
 import ExchangeComponent from "@/components/dashboard/ExchangeComponent";
 import WalletComponent from "@/components/dashboard/WalletComponent";
+import { renderMenu } from "@/service/api";
+import { notFound } from "next/navigation";
 
 const SpesificContainer = ({ params }) => {
+  const isValidCategory = (category) => {
+    let validCategory = [];
+    renderMenu.map((menu) => validCategory.push(menu.url));
+    return validCategory.includes(category);
+  };
+
+  if (!isValidCategory(`/${params.category}`)) {
+    return notFound();
+  }
   return (
     <>
       <title>{params.category.toUpperCase()}</title>
