@@ -42,10 +42,10 @@ const SecondChild = () => {
                   <span
                     className={`text-sm font-semibold ${
                       coin.RAW.USD.OPENDAY < coin.RAW.USD.PRICE
-                        ? "text-green-500"
+                        ? "text-red-500"
                         : coin.RAW.USD.OPENDAY === coin.RAW.USD.PRICE
                         ? "text-gray-500"
-                        : "text-red-500"
+                        : "text-green-500"
                     }`}
                   >
                     (
