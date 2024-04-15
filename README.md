@@ -1,6 +1,4 @@
-> LIVE LINK(VERCEL)
 
-[BARISTA FAKE COIN APP (LIVE)](https://barista-fake-coin-market.vercel.app/)
 
 
 
